@@ -1,10 +1,17 @@
 // business logic for AddressBook
 function AddressBook() {
   this.contacts = {};
+  this.currentID = 0;
+}
+
+AddressBook.prototype.assignId = function() {
+  this.currentID += 1;
+  return this.currentID;
 }
 
 AddressBook.prototype.addContact = function(contact) {
-  this.contacts[contact.firstName] = contact;
+  contact.id = this.assignId();
+  this.contacts[contact.id] = contact;
 };
 
 //business logic for Contacts
