@@ -57,7 +57,6 @@ function listContacts(addressBookToDisplay) {
   contactsDiv.append(ul);
 }
 
-
 function handleFormSubmission(event) {
   event.preventDefault();
   const inputtedFirstName = document.querySelector("input#new-first-name").value;
